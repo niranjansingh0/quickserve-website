@@ -349,7 +349,7 @@ const AboutPage = ({ setCurrentPage }) => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl font-bold mb-4">हमारी सेवा का अनुभव करने के लिए तैयार हैं?</h2>
           <p className="text-xl text-blue-100 mb-8">
-            उन सैकड़ों संतुष्ट ग्राहकों में शामिल हों जो अपनी दैनिक सेवा आवश्यकताओं के लिए क्विकसर्व पर भरोसा करते हैं।
+            उन सैकड़ों संतुष्ट ग्राहकों में शामिल हों जो अपनी दैनिक सेवा आवश्यकताओं के लिए ओम साइकिल स्टोर पर भरोसा करते हैं।
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button
