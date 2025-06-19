@@ -95,28 +95,29 @@ const ServicesPage = ({ setCurrentPage }) => {
         'Tire replacement and patching',
         'Complete bike servicing'
       ],
-      pricing: '₹50 - ₹500',
-      time: '30 min - 2 hours',
+      pricing: '₹25 - ₹200',
+      time: '15 min - 1 hours',
       bgColor: 'bg-orange-50',
       iconColor: 'text-orange-600'
     },
     {
       category: 'repair',
-      title: 'Mobile Phone Repair',
-      subtitle: 'Screen & Hardware',
-      description: 'Quick mobile phone repair services including screen replacement, battery change, and software issues.',
+      title: 'Bike Repair',
+      subtitle: 'Tyre Service',
+      description: 'Reliable and affordable cycle and bike repair services including tyre check, brake fixing, and general maintenance.',
       icon: <Phone className="w-8 h-8" />,
       features: [
-        'Screen replacement',
-        'Battery replacement',
-        'Charging port repair',
-        'Software troubleshooting'
+        'Tyre puncture repair',
+        'Brake adjustment and replacement',
+        'Chain and gear tuning',
+        'Full-body inspection & oiling'
       ],
-      pricing: '₹100 - ₹2000',
-      time: '1 - 4 hours',
+      pricing: '₹50 - ₹500',
+      time: '30 minutes - 1 hours',
       bgColor: 'bg-red-50',
       iconColor: 'text-red-600'
     },
+    
 
     // Financial Services
     {

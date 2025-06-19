@@ -22,10 +22,9 @@ const Footer = ({ setCurrentPage }) => {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* Company Info */}
           <div className="space-y-4">
-            <h3 className="text-2xl font-bold text-blue-400">QuickServe</h3>
+            <h3 className="text-2xl font-bold text-blue-400">ओम साइकिल स्टोर</h3>
             <p className="text-gray-400 text-sm leading-relaxed">
-              Your trusted local service hub for mobile recharge, repairs, and financial services. 
-              Serving the community with reliable and affordable solutions.
+              ओम साइकिल और रिचार्ज पॉइंट, मोबाइल रिचार्ज, साइकिल और टायर मरम्मत और मनी ट्रांसफर सेवाओं के लिए आपका पसंदीदा स्थान है। हर दिन तेज़, किफ़ायती और भरोसेमंद समाधानों के साथ समुदाय की सेवा करना गर्व की बात है।
             </p>
             <div className="flex items-center space-x-4">
               <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
@@ -69,8 +68,8 @@ const Footer = ({ setCurrentPage }) => {
               <div className="flex items-start space-x-3">
                 <MapPin className="w-4 h-4 text-blue-400 mt-1 flex-shrink-0" />
                 <div>
-                  <p className="text-gray-400 text-sm">123 Main Street</p>
-                  <p className="text-gray-400 text-sm">City Center, Kanpur, UP 208001</p>
+                  <p className="text-gray-400 text-sm">Police Lines Chauraha</p>
+                  <p className="text-gray-400 text-sm"> Barhaj Road, Deoria, Uttar Pradesh 274001</p>
                 </div>
               </div>
               
@@ -80,7 +79,7 @@ const Footer = ({ setCurrentPage }) => {
                   href="tel:+919876543210" 
                   className="text-gray-400 hover:text-blue-400 transition-colors text-sm"
                 >
-                  +91 98765 43210
+                  +91 9935156392, +91 7905647282
                 </a>
               </div>
               
@@ -90,7 +89,7 @@ const Footer = ({ setCurrentPage }) => {
                   href="mailto:info@quickserve.com" 
                   className="text-gray-400 hover:text-blue-400 transition-colors text-sm"
                 >
-                  info@quickserve.com
+                  omcyclestorejio@gmail.com
                 </a>
               </div>
               
@@ -109,8 +108,9 @@ const Footer = ({ setCurrentPage }) => {
         <div className="border-t border-gray-800 mt-12 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             <p className="text-gray-400 text-sm">
-              © 2025 QuickServe. All rights reserved.
+              © {new Date().getFullYear()} QuickServe. All rights reserved.
             </p>
+
             <div className="flex space-x-6">
              <a href="/privacy-policy" className="text-gray-400 hover:text-blue-400 transition-colors text-sm">
                Privacy Policy

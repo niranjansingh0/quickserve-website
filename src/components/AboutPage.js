@@ -8,7 +8,7 @@ import {
   Heart,
   Lightbulb,
   Shield,
-  Hand,      // ✅ Replacing 'Handshake'
+  Hand,      
   Star,
   CheckCircle,
   Calendar
@@ -19,81 +19,81 @@ const AboutPage = ({ setCurrentPage }) => {
   const values = [
     {
       icon: <Heart className="w-8 h-8" />,
-      title: "Customer First",
-      description: "We put our customers at the center of everything we do, ensuring satisfaction in every interaction."
+      title: "ग्राहक सर्वप्रथम",
+      description: "हम अपने प्रत्येक कार्य में अपने ग्राहकों को सर्वोपरि रखते हैं तथा प्रत्येक बातचीत में उनकी संतुष्टि सुनिश्चित करते हैं।"
     },
     {
       icon: <Shield className="w-8 h-8" />,
-      title: "Trust & Security",
-      description: "Your trust is our foundation. We maintain the highest standards of security and transparency."
+      title: "विश्वास और सुरक्षा",
+      description: "आपका भरोसा ही हमारी नींव है। हम सुरक्षा और पारदर्शिता के उच्चतम मानकों को बनाए रखते हैं।"
     },
     {
       icon: <Lightbulb className="w-8 h-8" />,
-      title: "Innovation",
-      description: "Continuously improving our services with the latest technology and innovative solutions."
+      title: "नवाचार",
+      description: "नवीनतम प्रौद्योगिकी और नवीन समाधानों के साथ अपनी सेवाओं में निरंतर सुधार करते रहना।"
     },
     {
      icon: <Hand className="w-8 h-8" />,
-     title: "Community Service",
-     description: "Committed to serving our local community and building lasting relationships."
+     title: "सामुदायिक सेवा",
+     description: "अपने स्थानीय समुदाय की सेवा करने और स्थायी संबंध बनाने के लिए प्रतिबद्ध।"
    }
 
   ];
 
   const milestones = [
     {
-      year: "2020",
-      title: "QuickServe Founded",
-      description: "Started as a small mobile recharge shop with a vision to serve the community."
+      year: "2000",
+      title: "ओम साइकिल स्टोर",
+      description: "समुदाय की सेवा करने के उद्देश्य से एक छोटी सी मोबाइल रिचार्ज दुकान के रूप में शुरुआत की गई।"
     },
     {
-      year: "2021",
-      title: "Services Expanded",
-      description: "Added cycle repair services and money transfer to meet growing community needs."
+      year: "2001",
+      title: "सेवाओं का विस्तार किया गया",
+      description: "बढ़ती सामुदायिक आवश्यकताओं को पूरा करने के लिए साइकिल मरम्मत सेवाएं और धन हस्तांतरण को जोड़ा गया।"
     },
     {
-      year: "2022",
-      title: "AEPS Integration",
-      description: "Became an authorized AEPS service provider, bringing banking services to the doorstep."
+      year: "2005",
+      title: "AEPS एकीकरण",
+      description: "एक अधिकृत AEPS सेवा प्रदाता बन गया, जिससे बैंकिंग सेवाएं घर-घर तक पहुंच गईं और वित्तीय समावेशन को बढ़ावा मिला।"
     },
     {
-      year: "2023",
-      title: "Digital Transformation",
-      description: "Modernized operations with digital systems for faster and more reliable service."
+      year: "2008",
+      title: "डिजिटल परिवर्तन",
+      description: "तीव्र एवं अधिक विश्वसनीय सेवा के लिए डिजिटल प्रणालियों के साथ आधुनिकीकृत परिचालन।"
     },
     {
       year: "2024",
-      title: "Community Recognition",
-      description: "Received local business excellence award for outstanding community service."
+      title: "सामुदायिक मान्यता",
+      description: "उत्कृष्ट सामुदायिक सेवा के लिए स्थानीय व्यवसाय उत्कृष्टता पुरस्कार प्राप्त किया।"
     }
   ];
 
   const teamMembers = [
     {
-      name: "Rajesh Sharma",
+      name: "राकेश कुमार सिंह",
       role: "Founder & Owner",
-      experience: "10+ years in service industry",
-      description: "Passionate about serving the community with reliable and affordable services."
+      experience: "25+ वर्ष का अनुभव",
+      description: "विश्वसनीय और किफायती सेवाओं के साथ समुदाय की सेवा करने के प्रति उत्साही।"
     },
     {
-      name: "Priya Gupta",
+      name: "शिवम सिंह",
       role: "Operations Manager",
-      experience: "5+ years in financial services",
-      description: "Ensures smooth operations and maintains service quality standards."
+      experience: "वित्तीय सेवा में 5+ वर्ष का अनुभव",
+      description: "सुचारू परिचालन सुनिश्चित करना तथा सेवा गुणवत्ता मानकों को बनाए रखना।"
     },
     {
-      name: "Amit Kumar",
+      name: "ताज",
       role: "Technical Specialist",
-      experience: "8+ years in repairs",
-      description: "Expert in mobile and bicycle repairs with extensive technical knowledge."
+      experience: "मरम्मत में 8+ वर्ष का अनुभव",
+      description: "साइकिल मरम्मत और बाइक सेवाओं में विशेषज्ञ, व्यावहारिक विशेषज्ञता और ग्राहक-प्रथम दृष्टिकोण के साथ।"
     }
   ];
 
   const achievements = [
-    { number: "500+", label: "Happy Customers", icon: <Users className="w-6 h-6" /> },
-    { number: "1000+", label: "Services Completed", icon: <CheckCircle className="w-6 h-6" /> },
-    { number: "4+", label: "Years of Service", icon: <Calendar className="w-6 h-6" /> },
-    { number: "5★", label: "Average Rating", icon: <Star className="w-6 h-6" /> }
+    { number: "15000+", label: "खुश ग्राहक", icon: <Users className="w-6 h-6" /> },
+    { number: "20000+", label: "पूर्ण की गई सेवाएँ", icon: <CheckCircle className="w-6 h-6" /> },
+    { number: "25+", label: "सेवा के वर्ष", icon: <Calendar className="w-6 h-6" /> },
+    { number: "5★", label: "श्रेणी", icon: <Star className="w-6 h-6" /> }
   ];
 
   return (
@@ -104,17 +104,15 @@ const AboutPage = ({ setCurrentPage }) => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="space-y-6">
               <h1 className="text-4xl lg:text-5xl font-bold leading-tight">
-                About 
-                <span className="block text-yellow-400">QuickServe</span>
+                
+                <span className="block text-yellow-400">ओम साइकिल स्टोर</span>
               </h1>
               <p className="text-xl text-blue-100 leading-relaxed">
-                We are your trusted local service hub, dedicated to providing reliable, 
-                affordable, and convenient services to our community. From mobile recharge 
-                to financial services, we're here to make your daily tasks easier.
+                हम आपके विश्वसनीय स्थानीय सेवा केंद्र हैं, जो अपने समुदाय को विश्वसनीय, सस्ती और सुविधाजनक सेवाएँ प्रदान करने के लिए समर्पित हैं। मोबाइल रिचार्ज से लेकर वित्तीय सेवाओं तक, हम आपके दैनिक कार्यों को आसान बनाने के लिए यहाँ हैं।
               </p>
               <div className="flex items-center space-x-4">
                 <MapPin className="w-6 h-6 text-yellow-400" />
-                <span className="text-lg">Proudly serving Kanpur since 2020</span>
+                <span className="text-lg">2000 से देवरिया की सेवा में गौरवपूर्ण योगदान</span>
               </div>
             </div>
             
@@ -144,27 +142,25 @@ const AboutPage = ({ setCurrentPage }) => {
             <div className="space-y-6">
               <div className="flex items-center space-x-3">
                 <Target className="w-8 h-8 text-blue-600" />
-                <h2 className="text-3xl font-bold text-gray-900">Our Mission</h2>
+                <h2 className="text-3xl font-bold text-gray-900">हमारा उद्देश्य</h2>
               </div>
               <p className="text-lg text-gray-700 leading-relaxed">
-                To provide accessible, reliable, and affordable services that simplify 
-                daily tasks for our community members. We strive to be the go-to destination 
-                for all essential services, delivered with excellence and care.
+                हमारे समुदाय के सदस्यों के लिए दैनिक कार्यों को सरल बनाने वाली सुलभ, विश्वसनीय और सस्ती सेवाएँ प्रदान करना। हम उत्कृष्टता और देखभाल के साथ प्रदान की जाने वाली सभी आवश्यक सेवाओं के लिए जाने-माने गंतव्य बनने का प्रयास करते हैं।
               </p>
               <div className="bg-blue-50 p-6 rounded-lg">
-                <h3 className="font-semibold text-gray-900 mb-2">What drives us:</h3>
+                <h3 className="font-semibold text-gray-900 mb-2">हमें क्या प्रेरित करता है:</h3>
                 <ul className="space-y-2 text-gray-700">
                   <li className="flex items-center">
                     <CheckCircle className="w-5 h-5 text-green-500 mr-2" />
-                    Making services accessible to everyone
+                    सेवाओं को सभी के लिए सुलभ बनाना
                   </li>
                   <li className="flex items-center">
                     <CheckCircle className="w-5 h-5 text-green-500 mr-2" />
-                    Building trust through consistent quality
+                    निरंतर गुणवत्ता के माध्यम से विश्वास का निर्माण
                   </li>
                   <li className="flex items-center">
                     <CheckCircle className="w-5 h-5 text-green-500 mr-2" />
-                    Supporting local community growth
+                    स्थानीय समुदाय के विकास को समर्थन देना
                   </li>
                 </ul>
               </div>
@@ -173,27 +169,25 @@ const AboutPage = ({ setCurrentPage }) => {
             <div className="space-y-6">
               <div className="flex items-center space-x-3">
                 <Lightbulb className="w-8 h-8 text-yellow-600" />
-                <h2 className="text-3xl font-bold text-gray-900">Our Vision</h2>
+                <h2 className="text-3xl font-bold text-gray-900">हमारा नज़रिया</h2>
               </div>
               <p className="text-lg text-gray-700 leading-relaxed">
-                To become the most trusted and comprehensive service hub in our region, 
-                known for innovation, reliability, and exceptional customer service. 
-                We envision a future where all daily service needs are met under one roof.
+                अपने क्षेत्र में सबसे भरोसेमंद और व्यापक सेवा केंद्र बनना, जो नवाचार, विश्वसनीयता और असाधारण ग्राहक सेवा के लिए जाना जाता है। हम एक ऐसे भविष्य की कल्पना करते हैं जहाँ सभी दैनिक सेवा ज़रूरतें एक ही छत के नीचे पूरी की जाएँगी।
               </p>
               <div className="bg-yellow-50 p-6 rounded-lg">
-                <h3 className="font-semibold text-gray-900 mb-2">Our goals:</h3>
+                <h3 className="font-semibold text-gray-900 mb-2">हमारे लक्ष्य:</h3>
                 <ul className="space-y-2 text-gray-700">
                   <li className="flex items-center">
                     <CheckCircle className="w-5 h-5 text-green-500 mr-2" />
-                    Expand services to meet evolving needs
+                    उभरती जरूरतों को पूरा करने के लिए सेवाओं का विस्तार करें
                   </li>
                   <li className="flex items-center">
                     <CheckCircle className="w-5 h-5 text-green-500 mr-2" />
-                    Embrace technology for better service
+                    बेहतर सेवा के लिए प्रौद्योगिकी को अपनाएं
                   </li>
                   <li className="flex items-center">
                     <CheckCircle className="w-5 h-5 text-green-500 mr-2" />
-                    Create positive community impact
+                    सकारात्मक सामुदायिक प्रभाव पैदा करें
                   </li>
                 </ul>
               </div>
@@ -206,9 +200,9 @@ const AboutPage = ({ setCurrentPage }) => {
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">Our Core Values</h2>
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">हमारे मूल मूल्य</h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              These values guide everything we do and shape how we serve our community
+              ये मूल्य हमारे हर काम का मार्गदर्शन करते हैं और यह तय करते हैं कि हम अपने समुदाय की सेवा कैसे करते हैं
             </p>
           </div>
           
@@ -234,9 +228,9 @@ const AboutPage = ({ setCurrentPage }) => {
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">Our Journey</h2>
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">हमारी यात्रा</h2>
             <p className="text-xl text-gray-600">
-              From humble beginnings to becoming a trusted community service hub
+              साधारण शुरुआत से लेकर एक विश्वसनीय सामुदायिक सेवा केंद्र बनने तक
             </p>
           </div>
           
@@ -276,9 +270,9 @@ const AboutPage = ({ setCurrentPage }) => {
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">Meet Our Team</h2>
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">हमारी टीम से मिलिए</h2>
             <p className="text-xl text-gray-600">
-              Dedicated professionals committed to serving you with excellence
+              समर्पित पेशेवर आपको उत्कृष्टता के साथ सेवा देने के लिए प्रतिबद्ध हैं
             </p>
           </div>
           
@@ -310,9 +304,9 @@ const AboutPage = ({ setCurrentPage }) => {
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">Why Choose QuickServe?</h2>
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">ओम साइकिल स्टोर क्यों चुनें?</h2>
             <p className="text-xl text-gray-600">
-              Here's what sets us apart from the competition
+              यहाँ वह बात बताई गई है जो हमें प्रतिस्पर्धा से अलग बनाती है
             </p>
           </div>
           
@@ -320,30 +314,30 @@ const AboutPage = ({ setCurrentPage }) => {
             <div className="bg-blue-50 rounded-xl p-6">
               <Clock className="w-8 h-8 text-blue-600 mb-4" />
               <h3 className="text-xl font-semibold text-gray-900 mb-2">
-                Quick & Reliable
+                त्वरित एवं विश्वसनीय
               </h3>
               <p className="text-gray-600">
-                Fast service delivery with consistent reliability. Most services completed within minutes.
+                निरंतर विश्वसनीयता के साथ तेज़ सेवा वितरण। अधिकांश सेवाएँ मिनटों में पूरी हो जाती हैं।
               </p>
             </div>
             
             <div className="bg-green-50 rounded-xl p-6">
               <Award className="w-8 h-8 text-green-600 mb-4" />
               <h3 className="text-xl font-semibold text-gray-900 mb-2">
-                Quality Assured
+                गुणवत्ता आश्वासन
               </h3>
               <p className="text-gray-600">
-                High-quality service standards maintained across all offerings with genuine parts and expertise.
+                वास्तविक भागों और विशेषज्ञता के साथ सभी पेशकशों में उच्च गुणवत्ता वाले सेवा मानकों को बनाए रखा गया है।
               </p>
             </div>
             
             <div className="bg-purple-50 rounded-xl p-6">
               <Heart className="w-8 h-8 text-purple-600 mb-4" />
               <h3 className="text-xl font-semibold text-gray-900 mb-2">
-                Personal Touch
+                निजी अंदाज़
               </h3>
               <p className="text-gray-600">
-                Personalized service with a friendly approach. We know our customers and their preferences.
+                मैत्रीपूर्ण दृष्टिकोण के साथ व्यक्तिगत सेवा। हम अपने ग्राहकों और उनकी प्राथमिकताओं को जानते हैं।
               </p>
             </div>
           </div>
@@ -353,22 +347,22 @@ const AboutPage = ({ setCurrentPage }) => {
       {/* CTA Section */}
       <section className="py-16 bg-blue-600 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl font-bold mb-4">Ready to Experience Our Service?</h2>
+          <h2 className="text-3xl font-bold mb-4">हमारी सेवा का अनुभव करने के लिए तैयार हैं?</h2>
           <p className="text-xl text-blue-100 mb-8">
-            Join hundreds of satisfied customers who trust QuickServe for their daily service needs.
+            उन सैकड़ों संतुष्ट ग्राहकों में शामिल हों जो अपनी दैनिक सेवा आवश्यकताओं के लिए क्विकसर्व पर भरोसा करते हैं।
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button
               onClick={() => setCurrentPage('services')}
               className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
             >
-              View Our Services
+              हमारी सेवाएँ देखें
             </button>
             <button
               onClick={() => setCurrentPage('contact')}
               className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors"
             >
-              Contact Us
+             हमसे संपर्क करें
             </button>
           </div>
         </div>

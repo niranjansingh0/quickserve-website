@@ -23,8 +23,8 @@ const Navigation = ({ currentPage, setCurrentPage }) => {
           {/* Logo */}
           <div className="flex items-center cursor-pointer" onClick={() => handleNavClick('home')}>
             <div className="flex-shrink-0">
-              <h1 className="text-2xl font-bold text-blue-600">QuickServe</h1>
-              <p className="text-xs text-gray-500">Your Local Service Hub</p>
+              <h1 className="text-2xl font-bold text-blue-600">ॐ साइकिल स्टोर </h1>
+              <p className="text-xs text-gray-500">आप की अपनी दुकान</p>
             </div>
           </div>
 

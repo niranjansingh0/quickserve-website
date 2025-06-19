@@ -15,45 +15,45 @@ const HomePage = ({ setCurrentPage }) => {
   const services = [
     {
       icon: <Smartphone className="w-8 h-8" />,
-      title: "Mobile Recharge",
-      description: "Quick and secure mobile recharge for all networks",
-      features: ["All Networks", "Instant Recharge", "24/7 Available"]
+      title: "मोबाइल रिचार्ज",
+      description: "सभी नेटवर्क के लिए त्वरित और सुरक्षित मोबाइल रिचार्ज",
+      features: ["सभी नेटवर्क", "तत्काल रिचार्ज", "24/7 उपलब्ध"]
     },
     {
       icon: <Wrench className="w-8 h-8" />,
-      title: "Cycle Repairs",
-      description: "Professional bicycle repair and maintenance services",
-      features: ["Expert Mechanics", "Quality Parts", "Same Day Service"]
+      title: "साइकिल मरम्मत",
+      description: "पेशेवर साइकिल मरम्मत और रखरखाव सेवाएं",
+      features: ["विशेषज्ञ मैकेनिक्स", "गुणवत्ता वाले पार्ट्स", "उसी दिन की सेवा"]
     },
     {
       icon: <CreditCard className="w-8 h-8" />,
-      title: "Money Transfer",
-      description: "Safe and fast money transfer services",
-      features: ["Secure Transfer", "Low Fees", "Multiple Options"]
+      title: "मनी ट्रांसफर",
+      description: "सुरक्षित और तेज़ धन हस्तांतरण सेवाएँ",
+      features: ["सुरक्षित स्थानांतरण", "कम शुल्क", "एकाधिक विकल्प"]
     },
     {
       icon: <Users className="w-8 h-8" />,
-      title: "AEPS Services",
-      description: "Aadhaar Enabled Payment System services",
-      features: ["Cash Withdrawal", "Balance Inquiry", "Mini Statement"]
+      title: "AEPS सेवाएं",
+      description: "आधार सक्षम भुगतान प्रणाली सेवाएँ",
+      features: ["नकद निकासी", "तुला राशि जाँच", "मिनी स्टेटमेंट"]
     }
   ];
 
   const stats = [
-    { number: "500+", label: "Happy Customers" },
-    { number: "1000+", label: "Services Completed" },
-    { number: "24/7", label: "Available" },
-    { number: "5★", label: "Average Rating" }
+    { number: "15000+", label: "खुश ग्राहक" },
+    { number: "20000+", label: "पूर्ण की गई सेवाएँ" },
+    { number: "24/7", label: "उपलब्ध" },
+    { number: "5★", label: "श्रेणी" }
   ];
 
   const testimonials = [
     {
-      name: "Rajesh Kumar",
+      name: "Niranjan Singh",
       text: "Excellent service! Quick mobile recharge and very friendly staff.",
       rating: 5
     },
     {
-      name: "Priya Singh",
+      name: "Shivam Singh",
       text: "My cycle was repaired perfectly. Great work at reasonable prices.",
       rating: 5
     },
@@ -61,7 +61,54 @@ const HomePage = ({ setCurrentPage }) => {
       name: "Amit Sharma",
       text: "Reliable money transfer service. I use it regularly for sending money home.",
       rating: 5
-    }
+    },
+    {
+     name: "Pooja Verma",
+     text: "Very helpful and polite staff. Got my SIM recharged instantly without any hassle.",
+     rating: 5
+   },
+   {
+     name: "Rahul Mehra",
+     text: "Quick cycle repair and affordable. Saved me from missing college!",
+     rating: 4
+   },
+   {
+     name: "Sneh",
+     text: "Everything under one roof – recharge, repair, and even AEPS. Highly convenient.",
+     rating: 5
+   },
+   {
+     name: "Manoj Gupta",
+     text: "Tyre service was fast and efficient. Good value for money.",
+     rating: 4
+   },
+   {
+     name: "Divya Chauhan",
+     text: "They helped me transfer money to my village quickly. Very trustworthy.",
+     rating: 5
+   },
+   {
+     name: "Ramesh Gupta",
+     text: "Om Cycle & Recharge Point is my go-to store for small tasks. Reliable and quick.",
+     rating: 5
+   },
+   {
+     name: "Jyoti Pandey",
+     text: "Loved the experience. The shopkeeper explains everything clearly and doesn't overcharge.",
+     rating: 5
+   },
+   {
+     name: "Alok Srivastava",
+     text: "Good place for minor cycle issues. Got my brakes fixed in 10 minutes.",
+     rating: 4
+   },
+   {
+     name: "Jitendra Singh",
+     text: "I appreciate their AEPS service. It helps people like me who don’t have easy bank access.",
+     rating: 5
+   }
+   
+
   ];
 
   return (
@@ -73,12 +120,11 @@ const HomePage = ({ setCurrentPage }) => {
             <div className="space-y-8">
               <div className="space-y-4">
                 <h1 className="text-5xl lg:text-6xl font-bold leading-tight">
-                  Your Local
-                  <span className="block text-yellow-400">Service Hub</span>
+                  ओम साइकिल स्टोर
+                  <span className="block text-yellow-400">&रिचार्ज पॉइंट</span>
                 </h1>
                 <p className="text-xl text-blue-100 leading-relaxed">
-                  From mobile recharge to cycle repairs, money transfers to AEPS services - 
-                  we're your one-stop solution for all daily needs.
+                  मोबाइल रिचार्ज से लेकर साइकिल मरम्मत, धन हस्तांतरण से लेकर AEPS सेवाओं तक - हम आपकी सभी दैनिक जरूरतों के लिए वन-स्टॉप समाधान हैं।
                 </p>
               </div>
               
@@ -87,25 +133,26 @@ const HomePage = ({ setCurrentPage }) => {
                   onClick={() => setCurrentPage('services')}
                   className="bg-yellow-400 text-gray-900 px-8 py-4 rounded-lg font-semibold hover:bg-yellow-300 transition-colors flex items-center justify-center group"
                 >
-                  Explore Services
+                  सेवाएँ खोजें
                   <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
                 </button>
                 <button
                   onClick={() => setCurrentPage('contact')}
                   className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-blue-700 transition-colors"
                 >
-                  Contact Us
+                  हमसे सपर्क करे
                 </button>
               </div>
               
               <div className="flex items-center space-x-6 text-sm">
                 <div className="flex items-center space-x-2">
                   <Clock className="w-5 h-5 text-yellow-400" />
-                  <span>Open 9 AM - 8 PM</span>
+                  <span>सुबह 9 बजे से शाम 8 बजे तक खुला
+                 </span>
                 </div>
                 <div className="flex items-center space-x-2">
                   <Shield className="w-5 h-5 text-yellow-400" />
-                  <span>Trusted & Secure</span>
+                  <span>विश्वसनीय एवं सुरक्षित</span>
                 </div>
               </div>
             </div>
@@ -113,7 +160,7 @@ const HomePage = ({ setCurrentPage }) => {
             <div className="relative">
               <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 space-y-6">
                 <div className="text-center">
-                  <h3 className="text-2xl font-bold mb-4">Quick Stats</h3>
+                  <h3 className="text-2xl font-bold mb-4">त्वरित आँकड़े</h3>
                 </div>
                 <div className="grid grid-cols-2 gap-6">
                   {stats.map((stat, index) => (
@@ -133,10 +180,9 @@ const HomePage = ({ setCurrentPage }) => {
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">Our Services</h2>
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">हमारी सेवाएँ</h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              We provide a comprehensive range of services to meet all your daily needs. 
-              Quality, speed, and reliability are our priorities.
+              हम आपकी सभी दैनिक ज़रूरतों को पूरा करने के लिए सेवाओं की एक व्यापक श्रृंखला प्रदान करते हैं। गुणवत्ता, गति और विश्वसनीयता हमारी प्राथमिकताएँ हैं।
             </p>
           </div>
           
@@ -182,9 +228,9 @@ const HomePage = ({ setCurrentPage }) => {
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">Why Choose QuickServe?</h2>
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">ओम साइकिल स्टोर क्यों चुनें?</h2>
             <p className="text-xl text-gray-600">
-              We're committed to providing the best service experience in your neighborhood
+              हम आपके पड़ोस में सर्वोत्तम सेवा अनुभव प्रदान करने के लिए प्रतिबद्ध हैं
             </p>
           </div>
           
@@ -193,9 +239,9 @@ const HomePage = ({ setCurrentPage }) => {
               <div className="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
                 <Clock className="w-8 h-8 text-blue-600" />
               </div>
-              <h3 className="text-2xl font-semibold text-gray-900 mb-2">Fast Service</h3>
+              <h3 className="text-2xl font-semibold text-gray-900 mb-2">तीव्र सेवा</h3>
               <p className="text-gray-600">
-                Quick turnaround times for all services. Most requests completed within minutes.
+                सभी सेवाओं के लिए त्वरित टर्नअराउंड समय। अधिकांश अनुरोध मिनटों में पूरे किए गए।
               </p>
             </div>
             
@@ -203,9 +249,9 @@ const HomePage = ({ setCurrentPage }) => {
               <div className="bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
                 <Shield className="w-8 h-8 text-green-600" />
               </div>
-              <h3 className="text-2xl font-semibold text-gray-900 mb-2">Secure & Reliable</h3>
+              <h3 className="text-2xl font-semibold text-gray-900 mb-2">सुरक्षित एवं विश्वसनीय</h3>
               <p className="text-gray-600">
-                Your transactions and data are safe with us. We use the latest security measures.
+                आपके लेन-देन और डेटा हमारे पास सुरक्षित हैं। हम नवीनतम सुरक्षा उपायों का उपयोग करते हैं।
               </p>
             </div>
             
@@ -213,9 +259,9 @@ const HomePage = ({ setCurrentPage }) => {
               <div className="bg-yellow-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
                 <Users className="w-8 h-8 text-yellow-600" />
               </div>
-              <h3 className="text-2xl font-semibold text-gray-900 mb-2">Expert Support</h3>
+              <h3 className="text-2xl font-semibold text-gray-900 mb-2">विशेषज्ञ सहायता</h3>
               <p className="text-gray-600">
-                Experienced professionals ready to help you with friendly, knowledgeable service.
+                अनुभवी पेशेवर मित्रवत, ज्ञानवर्धक सेवा के साथ आपकी सहायता के लिए तैयार हैं।
               </p>
             </div>
           </div>
@@ -226,9 +272,9 @@ const HomePage = ({ setCurrentPage }) => {
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">What Our Customers Say</h2>
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">हमारे ग्राहक क्या कहते हैं</h2>
             <p className="text-xl text-gray-600">
-              Don't just take our word for it - hear from our satisfied customers
+              केवल हमारे शब्दों पर विश्वास न करें - हमारे संतुष्ट ग्राहकों की बात सुनें
             </p>
           </div>
           
@@ -255,20 +301,20 @@ const HomePage = ({ setCurrentPage }) => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl font-bold mb-4">Ready to Get Started?</h2>
           <p className="text-xl text-blue-100 mb-8">
-            Visit us today for all your service needs. We're here to help!
+            अपनी सभी सेवा आवश्यकताओं के लिए आज ही हमसे मिलें। हम आपकी मदद के लिए यहाँ हैं!
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button
               onClick={() => setCurrentPage('contact')}
               className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
             >
-              Visit Our Store
+              हमारे स्टोर पर जाएँ
             </button>
             <button
               onClick={() => setCurrentPage('about')}
               className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors"
             >
-              Learn More
+              और अधिक जानें
             </button>
           </div>
         </div>

@@ -48,51 +48,54 @@ const ContactPage = () => {
         service: '',
         message: ''
       });
-    }, 3000);
+    }, 4000);
   };
 
-  const contactInfo = [
+    const contactInfo = [
     {
       icon: <MapPin className="w-6 h-6" />,
       title: "Visit Our Store",
       details: [
-        "123 Main Street",
-        "City Center, Kanpur, UP 208001",
-        "Near Central Mall"
+        "Police Lines Chauraha",
+        "Barhaj Road, Deoria, Uttar Pradesh 274001",
+        "Near 1 India Mall"
       ],
-      action: "Get Directions"
+      action: "Get Directions",
+      actionLink: "https://maps.app.goo.gl/U2aa9nE6cxw6LVqJ9"
     },
     {
       icon: <Phone className="w-6 h-6" />,
       title: "Call Us",
       details: [
-        "+91 98765 43210",
-        "+91 70123 45678",
+        "+91 9935156392",
+        "+91 7905647282",
         "Available 9 AM - 8 PM"
       ],
-      action: "Call Now"
+      action: "Call Now",
+      actionLink: "tel:+919935156392"
     },
     {
       icon: <Mail className="w-6 h-6" />,
       title: "Email Us",
       details: [
-        "info@quickserve.com",
-        "support@quickserve.com",
-        "Response within 2 hours"
+        "omcyclestorejio@gmail.com"
       ],
-      action: "Send Email"
+      action: "Send Email",
+      actionLink: "mailto:omcyclestorejio@gmail.com"
     },
     {
       icon: <MessageCircle className="w-6 h-6" />,
       title: "WhatsApp",
       details: [
-        "+91 98765 43210",
+        "+91 9935156392",
         "Quick support available",
         "Share photos for repairs"
       ],
-      action: "Chat Now"
+      action: "Chat Now",
+      actionLink: "https://wa.me/919935156392"
     }
   ];
+
 
   const businessHours = [
     { day: "Monday - Friday", hours: "9:00 AM - 8:00 PM" },
@@ -104,7 +107,7 @@ const ContactPage = () => {
     "Mobile Recharge",
     "DTH Recharge",
     "Cycle Repair",
-    "Mobile Repair",
+    "Bike Repair",
     "Money Transfer",
     "AEPS Services",
     "Bill Payment",
@@ -115,7 +118,7 @@ const ContactPage = () => {
     {
       title: "Emergency Repair",
       description: "Need urgent repair service?",
-      action: "Call +91 98765 43210",
+      action: "Call +91 9935156392",
       icon: <Phone className="w-5 h-5" />,
       bgColor: "bg-red-50",
       textColor: "text-red-600"
@@ -139,25 +142,80 @@ const ContactPage = () => {
   ];
 
   const testimonials = [
-    {
-      name: "Rahul Sharma",
-      service: "Mobile Repair",
-      rating: 5,
-      comment: "Excellent service! My phone was repaired quickly and works perfectly now."
-    },
-    {
-      name: "Priya Singh",
-      service: "Money Transfer",
-      rating: 5,
-      comment: "Very reliable and fast money transfer service. Always use QuickServe for this."
-    },
-    {
-      name: "Amit Kumar",
-      service: "Cycle Repair",
-      rating: 5,
-      comment: "Great work on my cycle repair. Professional and affordable service."
-    }
+  {
+    name: "Niranjan Singh",
+    service: "Mobile Recharge",
+    rating: 5,
+    comment: "Excellent service! Quick mobile recharge and very friendly staff."
+  },
+  {
+    name: "Shivam Singh",
+    service: "Cycle Repair",
+    rating: 5,
+    comment: "My cycle was repaired perfectly. Great work at reasonable prices."
+  },
+  {
+    name: "Amit Sharma",
+    service: "Money Transfer",
+    rating: 5,
+    comment: "Reliable money transfer service. I use it regularly for sending money home."
+  },
+  {
+    name: "Pooja Verma",
+    service: "SIM Recharge",
+    rating: 5,
+    comment: "Very helpful and polite staff. Got my SIM recharged instantly without any hassle."
+  },
+  {
+    name: "Rahul Mehra",
+    service: "Cycle Repair",
+    rating: 4,
+    comment: "Quick cycle repair and affordable. Saved me from missing college!"
+  },
+  {
+    name: "Sneh",
+    service: "Multi-Service",
+    rating: 5,
+    comment: "Everything under one roof – recharge, repair, and even AEPS. Highly convenient."
+  },
+  {
+    name: "Manoj Gupta",
+    service: "Tyre Service",
+    rating: 4,
+    comment: "Tyre service was fast and efficient. Good value for money."
+  },
+  {
+    name: "Divya Chauhan",
+    service: "Money Transfer",
+    rating: 5,
+    comment: "They helped me transfer money to my village quickly. Very trustworthy."
+  },
+  {
+    name: "Ramesh Gupta",
+    service: "General Services",
+    rating: 5,
+    comment: "Om Cycle & Recharge Point is my go-to store for small tasks. Reliable and quick."
+  },
+  {
+    name: "Jyoti Pandey",
+    service: "General Service",
+    rating: 5,
+    comment: "Loved the experience. The shopkeeper explains everything clearly and doesn't overcharge."
+  },
+  {
+    name: "Alok Srivastava",
+    service: "Cycle Repair",
+    rating: 4,
+    comment: "Good place for minor cycle issues. Got my brakes fixed in 10 minutes."
+  },
+  {
+    name: "Jitendra Singh",
+    service: "AEPS Service",
+    rating: 5,
+    comment: "I appreciate their AEPS service. It helps people like me who don’t have easy bank access."
+  }
   ];
+
 
   return (
     <div className="min-h-screen bg-gray-50">
@@ -249,7 +307,7 @@ const ContactPage = () => {
                           onChange={handleInputChange}
                           required
                           className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                          placeholder="+91 98765 43210"
+                          placeholder="+91 9935156392"
                         />
                       </div>
                     </div>
@@ -340,9 +398,15 @@ const ContactPage = () => {
                         </p>
                       ))}
                     </div>
-                    <button className="text-blue-600 font-medium text-sm hover:text-blue-700 transition-colors">
+                    <a
+                      href={info.actionLink}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-blue-600 font-medium text-sm hover:text-blue-700 transition-colors"
+                    >
                       {info.action}
-                    </button>
+                    </a>
+                    
                   </div>
                 ))}
               </div>
@@ -370,19 +434,34 @@ const ContactPage = () => {
               </div>
 
               {/* Map Placeholder */}
-              <div className="bg-white rounded-xl shadow-lg p-6">
-                <h3 className="text-lg font-semibold text-gray-900 mb-4">Find Us</h3>
-                <div className="bg-gray-200 rounded-lg h-48 flex items-center justify-center">
-                  <div className="text-center">
-                    <MapPin className="w-12 h-12 text-gray-400 mx-auto mb-2" />
-                    <p className="text-gray-500">Interactive Map</p>
-                    <p className="text-sm text-gray-400">123 Main Street, City Center, Kanpur</p>
-                  </div>
-                </div>
-                <button className="w-full mt-4 bg-blue-600 text-white py-2 px-4 rounded-lg font-medium hover:bg-blue-700 transition-colors">
-                  Open in Google Maps
-                </button>
-              </div>
+               <div className="bg-white rounded-xl shadow-lg p-6">
+                 <h3 className="text-lg font-semibold text-gray-900 mb-4">Find Us</h3>
+               
+                 {/* Embedded Google Map */}
+                 <div className="rounded-lg overflow-hidden h-48">
+                   <iframe
+                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14130.019336553055!2d83.7848!3d26.4987!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39915b0416f59f07%3A0x8c3d46e9dcbb33b6!2sPolice%20Line%20Chauraha%2C%20Barhaj%20Rd%2C%20Deoria%2C%20Uttar%20Pradesh%20274101!5e0!3m2!1sen!2sin!4v1718799999999!5m2!1sen!2sin"
+                     width="100%"
+                     height="100%"
+                     allowFullScreen=""
+                     loading="lazy"
+                     referrerPolicy="no-referrer-when-downgrade"
+                     className="w-full h-full border-0"
+                     title="Om Cycle & Recharge Point Location"
+                   ></iframe>
+                 </div>
+               
+                 {/* Button to open in Google Maps */}
+                 <a
+                   href="https://maps.app.goo.gl/U2aa9nE6cxw6LVqJ9"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   className="block text-center w-full mt-4 bg-blue-600 text-white py-2 px-4 rounded-lg font-medium hover:bg-blue-700 transition-colors"
+                 >
+                   Open in Google Maps
+                 </a>
+               </div>
+               
             </div>
           </div>
         </div>
