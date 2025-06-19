@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Navigation from './components/Navigation';
 import Footer from './components/Footer';
 import HomePage from './components/HomePage';
@@ -9,6 +9,11 @@ import ContactPage from './components/ContactPage';
 function App() {
   const [currentPage, setCurrentPage] = useState('home');
 
+  // Scroll to top whenever the page changes
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [currentPage]);
+
   const renderCurrentPage = () => {
     switch (currentPage) {
       case 'home':
@@ -18,7 +23,7 @@ function App() {
       case 'about':
         return <AboutPage setCurrentPage={setCurrentPage} />;
       case 'contact':
-        return <ContactPage />;
+        return <ContactPage setCurrentPage={setCurrentPage} />;
       default:
         return <HomePage setCurrentPage={setCurrentPage} />;
     }
