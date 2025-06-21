@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { 
   MapPin, 
   Phone, 
@@ -23,6 +23,36 @@ const ContactPage = () => {
     message: ''
   });
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
+
+  // Check if shop is open based on business hours
+  useEffect(() => {
+    const checkOpenStatus = () => {
+      const now = new Date();
+      const day = now.getDay(); // 0 = Sunday, 6 = Saturday
+      const hour = now.getHours();
+      const minute = now.getMinutes();
+
+      const currentTime = hour * 60 + minute;
+
+      let open = false;
+
+      if (day === 0) {
+        // Sunday: 9:00 AM - 4:00 PM
+        open = currentTime >= 540 && currentTime < 960;
+      } else if (day >= 1 && day <= 6) {
+        // Mon-Sat: 9:00 AM - 8:00 PM
+        open = currentTime >= 540 && currentTime < 1200;
+      }
+
+      setIsOpen(open);
+    };
+
+    checkOpenStatus();
+    const interval = setInterval(checkOpenStatus, 60000); // every minute
+
+    return () => clearInterval(interval);
+  }, []);
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
@@ -212,7 +242,7 @@ const ContactPage = () => {
     name: "Jitendra Singh",
     service: "AEPS Service",
     rating: 5,
-    comment: "I appreciate their AEPS service. It helps people like me who don’t have easy bank access."
+    comment: "I appreciate their AEPS service. It helps people like me who don't have easy bank access."
   }
   ];
 
@@ -425,10 +455,12 @@ const ContactPage = () => {
                     </div>
                   ))}
                 </div>
-                <div className="mt-4 p-3 bg-green-50 rounded-lg">
+                <div className={`mt-4 p-3 rounded-lg ${isOpen ? 'bg-green-50' : 'bg-red-50'}`}>
                   <div className="flex items-center">
-                    <div className="w-2 h-2 bg-green-400 rounded-full mr-2"></div>
-                    <span className="text-green-700 font-medium text-sm">Currently Open</span>
+                    <div className={`w-2 h-2 rounded-full mr-2 ${isOpen ? 'bg-green-400 animate-pulse' : 'bg-red-500'}`}></div>
+                    <span className={`font-medium text-sm ${isOpen ? 'text-green-700' : 'text-red-700'}`}>
+                      {isOpen ? 'Currently Open' : 'Closed Now'}
+                    </span>
                   </div>
                 </div>
               </div>
