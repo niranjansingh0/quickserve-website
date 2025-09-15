@@ -77,7 +77,7 @@ const ContactPage = () => {
     
       try {
         await fetch(
-          'https://script.google.com/macros/s/AKfycby0G01g-JTHy8PcjyePEJfd4X97SErUq9a-uRRYq2hXk-2OFBR74uGSbWmDFWj63mxgxQ/exec',
+          process.env.REACT_APP_GOOGLE_SCRIPT_URL,
           {
             method: 'POST',
             mode: 'no-cors',
